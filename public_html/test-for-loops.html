@@ -1,0 +1,67 @@
+<html>
+
+<head>
+
+<script type="text/javascript" language="Javascript" 
+        src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js">
+</script>
+
+
+<script>
+
+  function myFunction() {
+
+    // http://tabeeb-db.myimedia.com/tab_api/search/tags/test
+
+    $.get("http://localhost/code/test-php.php", function(data) {
+
+      alert("Data Loaded: " + data);
+
+      // console.log('data is ' + JSON.stringify(data));
+      console.log('data is ' + data.replace(/\n/g, ""));
+
+      var json_data = jQuery.parseJSON(data);
+
+      $.each(json_data, function(k, v) {
+
+        console.log('key is ' + k + ' and value is ' + v);
+        // console.log('  o is ' + o);
+
+        $.each(v, function(key, value) {
+
+          console.log('  key is ' + key + ' and value is ' + value);
+
+        });
+
+
+      });
+
+
+    });
+
+  }
+
+
+</script>
+
+
+
+<head>
+
+<body>
+
+	<br>
+
+	<p>Test server
+
+	<br>
+	<br>
+
+	<button onclick="myFunction()">get</button>
+
+	<p>call sleep-5.php and console log
+
+</body
+
+</html>
+

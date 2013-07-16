@@ -1,0 +1,11 @@
+SyntaxError: Invalid regular expression: /^IFENESIN)/: Unmatched ')'
+    at new RegExp (<anonymous>)
+    at /var/www/tabeeb/server.js:40:12
+    at callbacks (/var/www/tabeeb/node_modules/express/lib/router/index.js:161:37)
+    at param (/var/www/tabeeb/node_modules/express/lib/router/index.js:135:11)
+    at param (/var/www/tabeeb/node_modules/express/lib/router/index.js:132:11)
+    at pass (/var/www/tabeeb/node_modules/express/lib/router/index.js:142:5)
+    at Router._dispatch (/var/www/tabeeb/node_modules/express/lib/router/index.js:170:5)
+    at Object.router (/var/www/tabeeb/node_modules/express/lib/router/index.js:33:10)
+    at next (/var/www/tabeeb/node_modules/express/node_modules/connect/lib/proto.js:190:15)
+    at Object.expressInit [as handle] (/var/www/tabeeb/node_modules/express/lib/middleware.js:31:5)

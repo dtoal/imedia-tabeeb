@@ -1,0 +1,12 @@
+### Translation from RTF performed by UnRTF, version 0.19.2
+### For information about this marvellous program,
+### please go to http://www.gnu.org/software/unrtf/unrtf.html
+### document uses ANSI character set
+### font table contains 0 fonts total
+### invalid font number 0
+
+-----------------
+[ped-lung] Another pulmonary hemosiderosis case
+
+Management recommendations appreciated ?for 13 yo male with pulmonary hemosiderosis moved to the area after dx and open lung biopsy at age 5 (no cappillaritis reported), very stable for years but restrictive disease present on PFTs, never anemic, normal DLCO. On routine clinic visit had mild dyspnea and small drop in VC and FEV1. Chest CT showed increased ground glass densities and subpleural emphysema compared to 7 years previously. Bronchoscopy 3 weeks ago revealed bilateral pulmonary hemorrhage with 90% of macrophages hemosiderin positive. Cultures negative. Started Prednisone 40 mg BID for one week then reduced to 40 mg daily, repeat bronchoscopy today shows continued hemorrhage on BAL with RBC 9750/mm3, 500 WBC, differential 22 polymorphonuclear leukocytes, 1 lymphocyte 73 histiocytes and 4 eosinophils. Other work up last 2 moths has included Normal angiotensin converting enzyme, CRP at 0.9, C3 134 (normal), C4 27 (normal), ANCA negative, MPO Ab 2 (normal) Serine protease 3=1 (normal) ANA and anticardiolipin Ab negative. UA negative, comprehensive metabolic panel normal. IGE elevated at 398, unexplained. He has some mild exercise intolerance but has normal oxygen saturation does not have cough and is a very good student. I am planning to give Cytoxan (he is Tanner 2), other ideas ?
+

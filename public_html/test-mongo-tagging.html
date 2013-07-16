@@ -1,0 +1,99 @@
+<html>
+<head>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
+
+<script>
+
+  function get_tags() {
+
+    var word = $('#query_tags').val();
+
+    $("#tag_list").html(word);
+
+
+    $.getJSON('/tab_api/search/tags/' + word, function(data) {
+
+      var items = [];
+
+      for (var i in data) {
+
+        $.each(data[i], function(key, val) {
+          items.push('<li id="' + key + '">key is ' + key + ', value is "' + val + '"</li>');
+        });
+
+      }
+
+      $("#tag_list").html(items);
+
+    });
+
+
+  }
+
+
+  function get_tags_exact() {
+
+    var word = $('#query_tags').val();
+
+    $("#tag_list").html(word);
+
+
+    $.getJSON('/tab_api/searchexact/tags/' + word, function(data) {
+
+      var items = [];
+
+      var tags = '';
+
+      for (var i in data) {
+
+        $.each(data[i], function(key, val) {
+
+          items.push('<li id="' + key + '">key is ' + key + ', value is "' + val + '"</li>');
+
+          if (key == "tag") {
+            if (tags != '') { tags = tags.concat(','); }
+            tags = tags.concat(val);
+          }
+
+        });
+
+      }
+
+      items.push('<p>' + tags + '</p>');
+
+      $("#tag_list").html(items);
+
+    });
+
+
+  }
+
+
+</script>
+
+
+</head>
+
+<body>
+
+<br>
+<p>test mongo tags from javascript
+
+<br>
+<br>
+
+<input id="query_tags" type="text">
+
+<button onclick="get_tags()">get tags</button>
+<button onclick="get_tags_exact()">get tags exact search</button>
+
+
+<div id="tag_list"></div>
+
+
+</body>
+
+</html>
+

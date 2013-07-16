@@ -1,0 +1,78 @@
+<html>
+<head>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
+<script>
+
+  function get_dictionary_php() {
+
+    var word = $('#query_word').val();
+
+    $.getJSON('/query-dictionary.php?word=' + word, function(data) {
+
+      var items = [];
+
+      for ( i in data ) {
+
+        $.each(data[i], function(key, val) {
+          items.push('<li id="' + key + '">key is ' + key + ', value is "' + val + '"</li>');
+        });
+
+      }
+
+      $("#utf8_data").html(items);
+
+    });
+
+  }
+
+
+  function get_encyclopedia_php() {
+
+    var word = $('#query_word').val();
+
+    $.getJSON('/query-encyclopedia.php?word=' + word, function(data) {
+
+      var items = [];
+
+      $.each(data, function(key, val) {
+        items.push('<li id="' + key + '">key is ' + key + ', value is "' + val.name + '"</li>');
+      });
+
+      $("#utf8_data").html(items);
+
+    });
+
+  }
+
+</script>
+
+
+</head>
+
+<body>
+
+<br>
+<p>utf8 test from mysql, γ-iodopropyleneglycol
+
+<p>MediLexicon <a href="9-2.html">page</a>, dictionary
+<p>MedlinePlus <a href="http://www.nlm.nih.gov/medlineplus/ency/article/001665.htm">page</a>, encyclopedia
+
+<br>
+<br>
+
+
+<input id="query_word" type="text">
+
+<button onclick="get_dictionary_php()">query dictionary list from php</button>
+<button onclick="get_encyclopedia_php()">query encyclopedia from php</button>
+
+
+<div id="utf8_data"></div>
+
+
+</body>
+
+</html>
+

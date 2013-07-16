@@ -1,0 +1,51 @@
+<html>
+<head>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
+<script>
+
+  function get_spellcheck() {
+
+    var word = $('#spellcheck').val();
+
+    $.getJSON('/hunspell_api?word=' + word, function(data) {
+
+      var items = [];
+
+      $.each(data, function(key, val) {
+        items.push('<li id="' + key + '">key is ' + key + ', value is "' + val + '"</li>');
+      });
+
+      $("#json_data").html(items);
+
+    });
+
+  }
+
+
+</script>
+
+
+</head>
+
+<body>
+
+<br>
+<p>JSON test from <a href="http://hunspell.sourceforge.net/">Hunspell</a>
+<br>
+<br>
+
+
+<input id="spellcheck" type="text">
+
+<button onclick="get_spellcheck()">spell check</button>
+
+
+<div id="json_data"></div>
+
+
+</body>
+
+</html>
+

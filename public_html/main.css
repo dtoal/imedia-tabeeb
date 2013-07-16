@@ -1,0 +1,9 @@
+.content {
+	margin-left: 700px; 
+	width: 800px;
+}
+label {
+	position: relative;
+	left: 70px;
+}
+
